@@ -62,6 +62,8 @@ struct ContentView: View {
                         // APPEARENCE BUTTON
                         Button(action: {
                             isDarkMode.toggle()
+                            playSound(sound: "sound-tap", type: "mp3")
+                            feedback.notificationOccurred(.success)
                         },
                                label: {
                             Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
@@ -80,6 +82,8 @@ struct ContentView: View {
                     Button(
                         action: {
                             showNewTaskItem = true
+                            playSound(sound: "sound-ding", type: "mp3")
+                            feedback.notificationOccurred(.success)
                         },
                         label: {
                             Image(systemName: "plus.circle")
@@ -103,29 +107,22 @@ struct ContentView: View {
                     // MARK: - TASKS
                     List {
                         ForEach(items) { item in
-                            VStack(alignment: .leading) {
-                                Text("\(item.task ?? "")")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                
-                                NavigationLink {
-                                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                                } label: {
-                                    Text(item.timestamp!, formatter: itemFormatter)
-                                        .font(.footnote)
-                                        .foregroundStyle(.gray)
-                                }
-                            } //: LIST ITEM
-                        }
+                            ListRowItemView(item: item)
+                        } //: LIST ITEM
                         .onDelete(perform: deleteItems)
                     } //: LIST
-                    .scrollContentBackground(.hidden)
                     .shadow(color: .black.opacity(0.3), radius: 12)
                 } //: VSTACK
+                .scrollContentBackground(.hidden)
+                .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+                .transition(.move(edge: .bottom))
                 
                 // MARK: - NEW TASK ITEM
                 if showNewTaskItem {
-                    BlanckView()
+                    BlanckView(
+                        backgroundColor: isDarkMode ? Color.black : Color.gray,
+                        backgroundOpacity: isDarkMode ? 0.3 : 0.5
+                    )
                         .onTapGesture {
                             withAnimation {
                                 showNewTaskItem = false
@@ -135,17 +132,20 @@ struct ContentView: View {
                     NewTaskItemView(isShowing: $showNewTaskItem)
                 }
             } //: ZSTACK
+            
             .navigationTitle("Daily Tasks")
             .toolbar(.hidden)
             
             .background(
                 BackgroundImageView()
+                    .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
             )
             .background(
                 backgroundGradient.ignoresSafeArea()
+
             )
-        } //: ZSTACK
-    } //: NAVIGATION
+        } //: NAVIGATION
+    }
 }
 
 // MARK: - PREWIEW
