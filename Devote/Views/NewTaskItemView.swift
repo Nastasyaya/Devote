@@ -45,35 +45,10 @@ struct NewTaskItemView: View {
             Spacer()
             
             VStack(spacing: 16) {
-                TextField("New task", text: $task)
-                    .foregroundStyle(Color.pink)
-                    .font(.system(size: 24, weight: .bold, design: .rounded))
-                    .padding()
-                    .background(
-                        isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
-           )
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                newTaskTF
                 
-                Button(action: {
-                    addItem()
-                    playSound(sound: "sound-ding", type: "mp3")
-                    feedback.notificationOccurred(.success)
-                }, label: {
-                    Spacer()
-                    Text("SAVE")
-                        .font(.system(size: 24, weight: .bold, design: .rounded))
-                    Spacer()
-                })
-                .disabled(isButtonDisabled)
-                .onTapGesture {
-                    if isButtonDisabled {
-                        playSound(sound: "sound-tap", type: "mp3")
-                    }
-                }
-                .padding()
-                .foregroundStyle(.white)
-                .background(isButtonDisabled ? Color.blue : Color.pink)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                addItemButton
+                
             } //: VSTACK
             .padding(.horizontal)
             .padding(.vertical, 20)
@@ -85,6 +60,42 @@ struct NewTaskItemView: View {
             .frame(maxWidth: 640)
         } //: VSTACK
         .padding()
+    }
+    
+    // MARK: - NewTaskTF
+    private var newTaskTF: some View {
+        TextField("New task", text: $task)
+            .foregroundStyle(Color.pink)
+            .font(.system(size: 24, weight: .bold, design: .rounded))
+            .padding()
+            .background(
+                isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+    
+    // MARK: - AddItemButton
+    private var addItemButton: some View {
+        Button(action: {
+            addItem()
+            playSound(sound: "sound-ding", type: "mp3")
+            feedback.notificationOccurred(.success)
+        }, label: {
+            Spacer()
+            Text("SAVE")
+                .font(.system(size: 24, weight: .bold, design: .rounded))
+            Spacer()
+        })
+        .disabled(isButtonDisabled)
+        .onTapGesture {
+            if isButtonDisabled {
+                playSound(sound: "sound-tap", type: "mp3")
+            }
+        }
+        .padding()
+        .foregroundStyle(.white)
+        .background(isButtonDisabled ? Color.blue : Color.pink)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 

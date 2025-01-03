@@ -8,7 +8,6 @@
 import SwiftUI
 
 // MARK: - FORMATTER
-
 let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
@@ -17,7 +16,6 @@ let itemFormatter: DateFormatter = {
 }()
 
 // MARK: - UI
-
 var backgroundGradient: LinearGradient {
     return LinearGradient(
         colors: [
@@ -30,5 +28,4 @@ var backgroundGradient: LinearGradient {
 }
 
 // MARK: - UX
-
 let feedback = UINotificationFeedbackGenerator()

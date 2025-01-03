@@ -19,7 +19,6 @@ struct BlanckView: View {
         .background(backgroundColor)
         .opacity(backgroundOpacity)
         .blendMode(.overlay)
-        
     }
 }
 

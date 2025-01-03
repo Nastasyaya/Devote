@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B101ACF52C8995FB003A5477 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B101ACF42C8995FB003A5477 /* ListRowItemView.swift */; };
 		B101ACF72C899E44003A5477 /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B101ACF62C899E44003A5477 /* CheckBoxStyle.swift */; };
 		B1402C592C8709B500317EA7 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1402C582C8709B500317EA7 /* Formatter.swift */; };
-		B1402C5B2C87446F00317EA7 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1402C5A2C87446F00317EA7 /* BackgroundImageView.swift */; };
 		B14DF7102C53FB4D0038BA2A /* KeyBoardExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DF70F2C53FB4D0038BA2A /* KeyBoardExtention.swift */; };
 		B15990AD2C495CC60009608F /* DevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15990AC2C495CC60009608F /* DevoteApp.swift */; };
 		B15990AF2C495CC60009608F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15990AE2C495CC60009608F /* ContentView.swift */; };
@@ -28,7 +26,6 @@
 		B19342A12C8C3D71008AD456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15990B02C495CC80009608F /* Assets.xcassets */; };
 		B19342A22C8C3E84008AD456 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1402C582C8709B500317EA7 /* Formatter.swift */; };
 		B1C4D3D62C879061000F498F /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D3D52C879061000F498F /* NewTaskItemView.swift */; };
-		B1C4D3D82C879D74000F498F /* BlanckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D3D72C879D74000F498F /* BlanckView.swift */; };
 		B1F09CC22C8B965C006FF802 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F09CC12C8B965C006FF802 /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B101ACF42C8995FB003A5477 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
 		B101ACF62C899E44003A5477 /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 		B1402C582C8709B500317EA7 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
-		B1402C5A2C87446F00317EA7 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		B14DF70F2C53FB4D0038BA2A /* KeyBoardExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardExtention.swift; sourceTree = "<group>"; };
 		B15990A92C495CC60009608F /* Devote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15990AC2C495CC60009608F /* DevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoteApp.swift; sourceTree = "<group>"; };
@@ -79,9 +74,12 @@
 		B19342972C8C3733008AD456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B19342992C8C3733008AD456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C4D3D52C879061000F498F /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
-		B1C4D3D72C879D74000F498F /* BlanckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanckView.swift; sourceTree = "<group>"; };
 		B1F09CC12C8B965C006FF802 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B1F019272D2846E1007F5E71 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B15990A62C495CC60009608F /* Frameworks */ = {
@@ -167,11 +165,9 @@
 		B15990C32C495D950009608F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1F019272D2846E1007F5E71 /* Components */,
 				B15990AE2C495CC60009608F /* ContentView.swift */,
-				B1402C5A2C87446F00317EA7 /* BackgroundImageView.swift */,
 				B1C4D3D52C879061000F498F /* NewTaskItemView.swift */,
-				B1C4D3D72C879D74000F498F /* BlanckView.swift */,
-				B101ACF42C8995FB003A5477 /* ListRowItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +226,9 @@
 			dependencies = (
 				B193429B2C8C3733008AD456 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				B1F019272D2846E1007F5E71 /* Components */,
+			);
 			name = Devote;
 			productName = Devote;
 			productReference = B15990A92C495CC60009608F /* Devote.app */;
@@ -260,7 +259,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					B15990A82C495CC60009608F = {
 						CreatedOnToolsVersion = 15.4;
@@ -317,13 +316,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15990B62C495CC80009608F /* Persistence.swift in Sources */,
-				B1C4D3D82C879D74000F498F /* BlanckView.swift in Sources */,
 				B15990AF2C495CC60009608F /* ContentView.swift in Sources */,
 				B1402C592C8709B500317EA7 /* Formatter.swift in Sources */,
 				B15990B92C495CC80009608F /* Devote.xcdatamodeld in Sources */,
 				B14DF7102C53FB4D0038BA2A /* KeyBoardExtention.swift in Sources */,
-				B101ACF52C8995FB003A5477 /* ListRowItemView.swift in Sources */,
-				B1402C5B2C87446F00317EA7 /* BackgroundImageView.swift in Sources */,
 				B101ACF72C899E44003A5477 /* CheckBoxStyle.swift in Sources */,
 				B15990AD2C495CC60009608F /* DevoteApp.swift in Sources */,
 				B1F09CC22C8B965C006FF802 /* SoundPlayer.swift in Sources */,

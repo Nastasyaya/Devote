@@ -31,7 +31,7 @@ struct CheckBoxStyle: ToggleStyle {
 }
 
 #Preview {
-    Toggle("placeholder label", isOn: .constant(false))
+    Toggle("placeholder label", isOn: .constant(true))
         .toggleStyle(CheckBoxStyle())
         .padding()
 }
